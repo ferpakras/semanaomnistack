@@ -7,7 +7,7 @@ const routes = Router();
 /**
  * Métodos HTTP disponíveis (mais utilizados):
  * * GET: utilizado para buscar informações (requisições diretamente via browser)
- * * POST: utilizado para enviar informações (precisamos de uma ferramenta pra tetar o POST - Insomnia / Postman)
+ * * POST: utilizado para enviar informações (precisamos de uma ferramenta para testar o POST: Insomnia || Postman)
  * * PUT: utilizado para atualizar/editar informações
  * * DELETE: utilizado para deletar informações
  *
