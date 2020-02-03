@@ -1,12 +1,11 @@
 const express = require("express");
+
+//Mongoose é responsável por fazer a conexão da noss aplicação com o MongoDB
 const mongoose = require("mongoose");
 const routes = require("./routes");
 
 const app = express();
 
-/**
- * Conexão com banco de dados
- */
 mongoose.connect(
   "mongodb+srv://ferpa:ferpa@cluster0-pno1h.mongodb.net/week10?retryWrites=true&w=majority",
   {

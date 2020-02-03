@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const PointSchema = require("./utils/PointSchema");
 
 /**
  * Definimos os models de acordo com as entidades disponíveis dentro do projeto
@@ -17,7 +18,16 @@ const DevSchema = new mongoose.Schema({
   github_username: String,
   bio: String,
   avatar_url: String,
-  techs: [String]
+  techs: [String],
+
+  //Como o location precisa de alguns tratamentos, separamos em um arquivo utils para que possa ser reaproveitado
+  //Podemos reaproveitar esse cara em outros schemas que utilizarão latitude/longituded
+  //Precisamos obrigatoriamente utilizar um index quando trabalhamos com location
+  location: {
+    type: PointSchema,
+    //É utilizado apenas para facilitar a busca no banco
+    index: "2dsphere"
+  }
 });
 
 /**
